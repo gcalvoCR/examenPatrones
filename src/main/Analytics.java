@@ -1,6 +1,7 @@
 package main;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Analytics {
 
@@ -21,6 +22,7 @@ public class Analytics {
 			}
 		}
 
+		Collections.sort(list);
 		int cantidad = list.size();
 		String[] myList = new String[cantidad];
 
@@ -54,6 +56,7 @@ public class Analytics {
 					list.add(x);
 				}
 			}
+			Collections.sort(list);
 			System.out.println(list.toString());
 
 			int cantidad = list.size();
