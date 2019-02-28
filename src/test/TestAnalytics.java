@@ -62,4 +62,17 @@ public class TestAnalytics {
 		assertEquals("[ala, mia]", Arrays.toString(test2), "It didn't bring the right string");
 	}
 
+	@Test
+	public void testPrimeraMasLarga() {
+
+		String text1 = "casa pal casita";
+		String text2 = "casita casota mia cosa ala";
+
+		String test1 = Analytics.primeraMasLarga(text1);
+		String test2 = Analytics.primeraMasLarga(text2);
+
+		assertEquals("casita", test1, "It didn't bring the right string");
+		assertEquals("casita", test2, "It didn't bring the right string");
+	}
+
 }

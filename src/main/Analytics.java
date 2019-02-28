@@ -57,7 +57,6 @@ public class Analytics {
 				}
 			}
 			Collections.sort(list);
-			System.out.println(list.toString());
 
 			int cantidad = list.size();
 			myList = new String[cantidad];
@@ -69,5 +68,26 @@ public class Analytics {
 		}
 		return myList;
 
+	}
+
+	public static String primeraMasLarga(String text) {
+		int max = 0;
+		String palabra = "";
+		String[] parts = text.split(" ");
+
+		for (String x : parts) {
+			if (x.length() >= max) {
+				max = x.length();
+			}
+		}
+
+		for (String x : parts) {
+			if (x.length() == max) {
+				palabra = x;
+				break;
+			}
+		}
+
+		return palabra;
 	}
 }
